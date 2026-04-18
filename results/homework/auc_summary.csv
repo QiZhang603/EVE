@@ -1,0 +1,6 @@
+method,auc,n_labeled_overlap,source_file
+msa_direct,0.9817663817663819,157,./results/evol_indices/P53_HUMAN_1_samples_msa_direct.csv
+bayes_z50,0.947008547008547,157,./results/evol_indices/P53_HUMAN_300_samples_bayes_z50.csv
+nonbayes_z50,0.927920227920228,157,./results/evol_indices/P53_HUMAN_300_samples_nonbayes_z50.csv
+bayes_z100,0.9153846153846154,157,./results/evol_indices/P53_HUMAN_300_samples_bayes_z100.csv
+bayes_z10,0.8492877492877494,157,./results/evol_indices/P53_HUMAN_300_samples_bayes_z10.csv

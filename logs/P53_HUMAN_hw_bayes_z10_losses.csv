@@ -1,0 +1,8 @@
+Number of sequences in alignment file:	3630
+Neff:	443.49035766802706
+Alignment sequence length:	329
+|Train : Update 500. Negative ELBO : 289657.156, BCE: 713.624, KLD_latent: 8.790, KLD_decoder_params_norm: 288934.750, Time: 11.68 |
+|Train : Update 1000. Negative ELBO : 287916.156, BCE: 577.202, KLD_latent: 18.598, KLD_decoder_params_norm: 287320.375, Time: 23.37 |
+|Train : Update 1500. Negative ELBO : 286215.375, BCE: 483.886, KLD_latent: 24.764, KLD_decoder_params_norm: 285706.750, Time: 35.03 |
+|Train : Update 2000. Negative ELBO : 284535.625, BCE: 415.514, KLD_latent: 26.599, KLD_decoder_params_norm: 284093.531, Time: 46.55 |
+|Train : Update 2500. Negative ELBO : 282881.406, BCE: 372.445, KLD_latent: 28.595, KLD_decoder_params_norm: 282480.375, Time: 58.14 |

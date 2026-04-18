@@ -170,8 +170,7 @@ class VAE_Standard_MLP_decoder(nn.Module):
     """
     Standard MLP decoder class for the VAE model.
     """
-    def __init__(self, seq_len, alphabet_size, hidden_layers_sizes, z_dim, first_hidden_nonlinearity, last_hidden_nonlinearity, dropout_proba,
-                 convolve_output, convolution_depth, include_temperature_scaler, include_sparsity, num_tiles_sparsity):
+    def __init__(self, params):
         """
         Required input parameters:
         - seq_len: (Int) Sequence length of sequence alignment
@@ -197,7 +196,7 @@ class VAE_Standard_MLP_decoder(nn.Module):
         self.bayesian_decoder = False
         self.dropout_proba = params['dropout_proba']
         self.convolve_output = params['convolve_output']
-        self.convolution_depth = params['convolution_depth']
+        self.convolution_depth = params['convolution_output_depth']
         self.include_temperature_scaler = params['include_temperature_scaler']
         self.include_sparsity = params['include_sparsity']
         self.num_tiles_sparsity = params['num_tiles_sparsity']
@@ -271,7 +270,7 @@ class VAE_Standard_MLP_decoder(nn.Module):
         if self.dropout_proba > 0.0:
             x = self.dropout_layer(x)
 
-        W_out = self.W_out.data
+        W_out = self.W_out
 
         if self.convolve_output:
             W_out = torch.mm(W_out.view(self.seq_len * self.hidden_layers_sizes[-1], self.channel_size), 

@@ -96,7 +96,8 @@ class MSA_processing:
             # Overwrite seq_name_to_sequence with clean version
             self.seq_name_to_sequence = defaultdict(str)
             for seq_idx in range(len(msa_df['sequence'])):
-                self.seq_name_to_sequence[msa_df.index[seq_idx]] = msa_df.sequence[seq_idx]
+                # pandas>=3 requires explicit positional indexing here.
+                self.seq_name_to_sequence[msa_df.index[seq_idx]] = msa_df['sequence'].iloc[seq_idx]
 
         self.focus_seq = self.seq_name_to_sequence[self.focus_seq_name]
         self.focus_cols = [ix for ix, s in enumerate(self.focus_seq) if s == s.upper() and s!='-'] 
